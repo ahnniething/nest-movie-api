@@ -8,6 +8,7 @@ import {
   Post,
   Query,
 } from '@nestjs/common';
+import { CreateMovieDTO } from './dto/create-movie.dto';
 import { Movie } from './entities/movie.entity';
 import { MoviesService } from './movies.service';
 
@@ -32,7 +33,7 @@ export class MoviesController {
   }
 
   @Post()
-  create(@Body() movieData) {
+  create(@Body() movieData: CreateMovieDTO) {
     return this.moviesService.create(movieData);
   }
 
