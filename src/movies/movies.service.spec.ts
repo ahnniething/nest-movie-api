@@ -78,7 +78,6 @@ describe('MoviesService', () => {
         year: 2000,
       });
       const afterCreate = service.getAll().length;
-      console.log(beforeCreate, afterCreate);
       expect(afterCreate).toBeGreaterThan(beforeCreate);
     });
   });
